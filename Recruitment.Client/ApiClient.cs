@@ -10,13 +10,14 @@ namespace Recruitment.Client
     public class ApiClient : IApiClient
     {
         private readonly string _baseUrl;
+       
         // <summary>
         /// Initializes a new client using only one parameter.
-        /// If there were more input parameters then it would be used ApiConfiguration class to pass into constructor many params.
+        /// If there were more input parameters then it would be used ApiConfiguration class/interface to pass into constructor many params.
         /// </summary>
         public ApiClient(string baseUrl)
         {
-            _baseUrl = baseUrl ?? throw new ArgumentNullException(nameof(baseUrl));
+            _baseUrl = baseUrl ?? throw new ArgumentNullException(nameof(baseUrl));            
         }
 
         public Task<string> CalculateHashCommandAsync(CalculateHashCommand cmd)

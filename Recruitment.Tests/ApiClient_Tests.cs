@@ -30,7 +30,8 @@ namespace Recruitment.Tests
 
                 await _apiClient.CalculateHashCommandAsync(It.IsAny<CalculateHashCommand>());
 
-                httpTest.ShouldHaveCalled("http://localhost/api/command/CalculateHashCommand").WithVerb(HttpMethod.Post).WithHeader("content-type", "application/json");
+                httpTest.ShouldHaveCalled("http://localhost/api/command/CalculateHashCommand")
+                    .WithVerb(HttpMethod.Post).WithHeader("content-type", "application/json");
             }
         }
 
@@ -43,9 +44,25 @@ namespace Recruitment.Tests
             {
                 httpTest.RespondWith("hashcode", statuscode);
 
-                var ex = await Assert.ThrowsExceptionAsync<FlurlHttpException>(async () => _ = await _apiClient.CalculateHashCommandAsync(new CalculateHashCommand()));
+                var ex = await Assert.ThrowsExceptionAsync<FlurlHttpException>(
+                    async () => _ = await _apiClient.CalculateHashCommandAsync(new CalculateHashCommand()));
+
                 Assert.AreEqual(ex.StatusCode, statuscode);
             }
+        }
+
+        [TestMethod]
+        [DataRow("")]
+        [DataRow("url")]
+        [DataRow("localhost")]
+        [DataRow("http//localhost/")]
+        [DataRow("httpss//localhost/")]
+        public async Task ApiClient_Throws_FlurlHttpException_InvalidRequestUrl(string baseUrl)
+        {
+            var apiClient = new ApiClient(baseUrl);
+
+            var ex = await Assert.ThrowsExceptionAsync<FlurlHttpException>(
+                     async () => _ = await apiClient.CalculateHashCommandAsync(new CalculateHashCommand()));
         }
 
         [TestMethod]

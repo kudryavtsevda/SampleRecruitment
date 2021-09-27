@@ -39,7 +39,8 @@ namespace Recruitment.Tests
         {
             var handler = new CalculateHashCommandHandler(_mockEncryptor.Object);
 
-            await Assert.ThrowsExceptionAsync<ArgumentNullException>(async () => await handler.HandleAsync(It.IsAny<CalculateHashCommand>(), It.IsAny<CancellationToken>()));
+            await Assert.ThrowsExceptionAsync<ArgumentNullException>(
+                async () => await handler.HandleAsync(It.IsAny<CalculateHashCommand>(), It.IsAny<CancellationToken>()));
         }
 
         [TestMethod]
