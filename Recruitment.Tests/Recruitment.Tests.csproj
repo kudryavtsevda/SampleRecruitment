@@ -17,7 +17,7 @@
   <ItemGroup>
     <ProjectReference Include="..\Recruitment.CommandHandlers\Recruitment.CommandHandlers.csproj" />
     <ProjectReference Include="..\Recruitment.Contracts\Recruitment.Contracts.csproj" />
-    <ProjectReference Include="..\Recuitment.DomainLogic\Recuitment.DomainLogic.csproj" />
+    <ProjectReference Include="..\Recruitment.DomainLogic\Recruitment.DomainLogic.csproj" />
   </ItemGroup>
 
 </Project>

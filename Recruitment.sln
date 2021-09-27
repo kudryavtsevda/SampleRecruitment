@@ -3,13 +3,13 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.31402.337
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Recuitment.Api", "Recuitment.Api\Recuitment.Api.csproj", "{15832621-1B4F-4608-9692-4F21325125DA}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Recruitment.Api", "Recruitment.Api\Recruitment.Api.csproj", "{15832621-1B4F-4608-9692-4F21325125DA}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Recuitment.Tests", "Recuitment.Tests\Recuitment.Tests.csproj", "{817E0B8D-257C-4FBC-B34A-CD892FECA7A3}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Recruitment.Tests", "Recruitment.Tests\Recruitment.Tests.csproj", "{817E0B8D-257C-4FBC-B34A-CD892FECA7A3}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Recruitment.Contracts", "Recruitment.Contracts\Recruitment.Contracts.csproj", "{770F6FCF-30F4-40AB-A5F6-B5F0489193DB}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Recuitment.DomainLogic", "Recuitment.DomainLogic\Recuitment.DomainLogic.csproj", "{D38596D2-317E-48D5-9570-0041CF91A4F5}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Recruitment.DomainLogic", "Recruitment.DomainLogic\Recruitment.DomainLogic.csproj", "{D38596D2-317E-48D5-9570-0041CF91A4F5}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Recruitment.CommandHandlers", "Recruitment.CommandHandlers\Recruitment.CommandHandlers.csproj", "{53C0408E-AC69-4CCB-9428-350D0A2832D5}"
 EndProject

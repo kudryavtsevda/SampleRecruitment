@@ -7,6 +7,8 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.OpenApi.Models;
 using Recruitment.DomainLogic;
+using Microsoft.AspNetCore.Diagnostics.HealthChecks;
+using HealthChecks.UI.Client;
 using Recruitment.Contracts;
 using Recruitment.CommandHandlers;
 
@@ -26,6 +28,9 @@ namespace Recruitment.Api
             services.AddCommandControllers(typeof(CalculateHashCommandHandler).Assembly, typeof(CalculateHashCommand).Assembly);
 
             services.AddTransient<IEncryptor, MD5Encryptor>();
+
+            services.AddHealthChecks();
+            services.AddHealthChecksUI().AddInMemoryStorage(); ;
 
             services.AddControllers();
             services.AddSwaggerGen(c =>
@@ -48,6 +53,17 @@ namespace Recruitment.Api
             app.UseRouting();
 
             app.UseAuthorization();
+
+            app.UseHealthChecks("/api/health", new HealthCheckOptions()
+            {
+                Predicate = _ => true,
+                ResponseWriter = UIResponseWriter.WriteHealthCheckUIResponse
+            });
+            app.UseHealthChecksUI(options =>
+            {
+                options.UIPath = "/healthchecks-ui";
+                options.ApiPath = "/health-ui-api";
+            });
 
             app.UseEndpoints(endpoints =>
             {
