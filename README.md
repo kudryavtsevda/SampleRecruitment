@@ -11,6 +11,8 @@ It consists of only one class CalculateHashCommand with two required fields: log
 * [Tests](https://github.com/kudryavtsevda/SampleRecruitment/tree/main/Recruitment.Tests) uses [Moq](https://github.com/moq/moq) for mocking. It covers Client, Handler and MD5 hash calculation in accordance with [RFC1321](https://datatracker.ietf.org/doc/html/rfc1321) specification.
 * [IntegrationTests](https://github.com/kudryavtsevda/SampleRecruitment/tree/main/Recruitment.IntegrationTests) checks the main api and health check endpoints.
 
+*Note: use VS2019 to run the project*
+
 ## The solution structure
 ![image](https://user-images.githubusercontent.com/4447809/134943499-c08ffb5f-a62e-43a5-bfd1-36028855d57b.png)
 
