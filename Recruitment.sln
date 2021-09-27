@@ -15,6 +15,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Recruitment.CommandHandlers
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Recruitment.Client", "Recruitment.Client\Recruitment.Client.csproj", "{BE85D135-A98D-4D73-AC3A-912BD22CC5EE}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Recruitment.IntegrationTests", "Recruitment.IntegrationTests\Recruitment.IntegrationTests.csproj", "{D7C21AAF-FAC4-41F3-8B41-174D1C72060E}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -45,6 +47,10 @@ Global
 		{BE85D135-A98D-4D73-AC3A-912BD22CC5EE}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{BE85D135-A98D-4D73-AC3A-912BD22CC5EE}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{BE85D135-A98D-4D73-AC3A-912BD22CC5EE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D7C21AAF-FAC4-41F3-8B41-174D1C72060E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D7C21AAF-FAC4-41F3-8B41-174D1C72060E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D7C21AAF-FAC4-41F3-8B41-174D1C72060E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D7C21AAF-FAC4-41F3-8B41-174D1C72060E}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
