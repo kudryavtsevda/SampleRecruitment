@@ -11,7 +11,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Recruitment.Contracts", "Re
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Recruitment.DomainLogic", "Recruitment.DomainLogic\Recruitment.DomainLogic.csproj", "{D38596D2-317E-48D5-9570-0041CF91A4F5}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Recruitment.CommandHandlers", "Recruitment.CommandHandlers\Recruitment.CommandHandlers.csproj", "{53C0408E-AC69-4CCB-9428-350D0A2832D5}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Recruitment.CommandHandlers", "Recruitment.CommandHandlers\Recruitment.CommandHandlers.csproj", "{53C0408E-AC69-4CCB-9428-350D0A2832D5}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Recruitment.Client", "Recruitment.Client\Recruitment.Client.csproj", "{BE85D135-A98D-4D73-AC3A-912BD22CC5EE}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -39,6 +41,10 @@ Global
 		{53C0408E-AC69-4CCB-9428-350D0A2832D5}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{53C0408E-AC69-4CCB-9428-350D0A2832D5}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{53C0408E-AC69-4CCB-9428-350D0A2832D5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BE85D135-A98D-4D73-AC3A-912BD22CC5EE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BE85D135-A98D-4D73-AC3A-912BD22CC5EE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BE85D135-A98D-4D73-AC3A-912BD22CC5EE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BE85D135-A98D-4D73-AC3A-912BD22CC5EE}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
