@@ -8,7 +8,7 @@
 It consists of only one class CalculateHashCommand with two required fields: login and password.
 * [CommandHandlers](https://github.com/kudryavtsevda/SampleRecruitment/tree/main/Recruitment.CommandHandlers) contains only one handler which concatenates login and password fields and call md5 hash function.
 * [DomainLogic](https://github.com/kudryavtsevda/SampleRecruitment/tree/main/Recruitment.DomainLogic) consists of classes and interfaces for md5 hash evaluation. It receives string and apply hash function.
-* [Tests](https://github.com/kudryavtsevda/SampleRecruitment/tree/main/Recruitment.Tests) uses [Moq](https://github.com/moq/moq) for mocking. It covers Client, Handler and MD5 hash calculation based on [RFC1321](https://datatracker.ietf.org/doc/html/rfc1321) specification.
+* [Tests](https://github.com/kudryavtsevda/SampleRecruitment/tree/main/Recruitment.Tests) uses [Moq](https://github.com/moq/moq) for mocking. It covers Client, Handler and MD5 hash calculation in accordance with [RFC1321](https://datatracker.ietf.org/doc/html/rfc1321) specification.
 * [IntegrationTests](https://github.com/kudryavtsevda/SampleRecruitment/tree/main/Recruitment.IntegrationTests) checks the main api and health check endpoints.
 
 ## The solution structure
