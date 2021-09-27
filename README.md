@@ -1,4 +1,4 @@
-# SampleRecuitment
+# SampleRecruitment
 ## General description
 
 * The solution is created via VS2019 using .NET 5. It is a small [API](https://github.com/kudryavtsevda/SampleRecruitment/tree/main/Recruitment.Api) with one main feature: md5 hash calculation.
