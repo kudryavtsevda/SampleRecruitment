@@ -8,4 +8,9 @@
     <PackageReference Include="CommandQuery" Version="2.0.0" />
   </ItemGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\Recruitment.Contracts\Recruitment.Contracts.csproj" />
+    <ProjectReference Include="..\Recuitment.DomainLogic\Recuitment.DomainLogic.csproj" />
+  </ItemGroup>
+
 </Project>

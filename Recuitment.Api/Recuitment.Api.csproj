@@ -1,11 +1,18 @@
-<Project Sdk="Microsoft.NET.Sdk.Web">
+﻿<Project Sdk="Microsoft.NET.Sdk.Web">
 
   <PropertyGroup>
     <TargetFramework>net5.0</TargetFramework>
   </PropertyGroup>
 
   <ItemGroup>
+    <PackageReference Include="CommandQuery.AspNetCore" Version="2.0.0" />
     <PackageReference Include="Swashbuckle.AspNetCore" Version="5.6.3" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Recruitment.CommandHandlers\Recruitment.CommandHandlers.csproj" />
+    <ProjectReference Include="..\Recruitment.Contracts\Recruitment.Contracts.csproj" />
+    <ProjectReference Include="..\Recuitment.DomainLogic\Recuitment.DomainLogic.csproj" />
   </ItemGroup>
 
 </Project>

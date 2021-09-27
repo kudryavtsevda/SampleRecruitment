@@ -7,7 +7,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace Recuitment.Api
+namespace Recruitment.Api
 {
     public class Program
     {
