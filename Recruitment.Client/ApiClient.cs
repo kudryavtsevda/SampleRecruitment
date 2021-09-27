@@ -9,19 +9,14 @@ namespace Recruitment.Client
 {
     public class ApiClient : IApiClient
     {
-        private readonly IApiClientConfiguration _config;
-
+        private readonly string _baseUrl;
+        // <summary>
+        /// Initializes a new client using only one parameter.
+        /// If there were more input parameters then it would be used ApiConfiguration class to pass into constructor many params.
+        /// </summary>
         public ApiClient(string baseUrl)
         {
-            _ = baseUrl ?? throw new ArgumentNullException(nameof(baseUrl));
-
-            _config = new ApiConfiguration { BaseUrl = baseUrl };
-        }
-
-        public ApiClient(IApiClientConfiguration config)
-        {
-            _config = config ?? throw new ArgumentNullException(nameof(config));
-            _ = config.BaseUrl ?? throw new ArgumentNullException(nameof(config.BaseUrl));
+            _baseUrl = baseUrl ?? throw new ArgumentNullException(nameof(baseUrl));
         }
 
         public Task<string> CalculateHashCommandAsync(CalculateHashCommand cmd)
@@ -31,15 +26,11 @@ namespace Recruitment.Client
 
         public async Task<string> CalculateHashCommandAsync(CalculateHashCommand cmd, CancellationToken cancellationToken)
         {
-            var baseUrl = _config.BaseUrl;
-
-            var response = await baseUrl.AppendPathSegment("api/command/CalculateHashCommand")
+            var response = await _baseUrl.AppendPathSegment("api/command/CalculateHashCommand")
                                         .WithHeaders(new { Accept = "*/*", Content_Type = "application/json" })
                                         .PostJsonAsync(cmd, cancellationToken);
 
             return await response.GetStringAsync();
         }
-
-        public IApiClientConfiguration Configuration => _config;
     }
 }

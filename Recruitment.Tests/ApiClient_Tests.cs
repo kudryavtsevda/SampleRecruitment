@@ -49,23 +49,9 @@ namespace Recruitment.Tests
         }
 
         [TestMethod]
-        [DataRow(typeof(string))]
-        [DataRow(typeof(ApiConfiguration))]
-        public void ApiClient_ApiConfiguration_Constructor_Throws_ArgumentNullException(Type type)
+        public void ApiClient_ApiConfiguration_Constructor_Throws_ArgumentNullException()
         {
-            var apiClientCreator = GetApiClientFactory(type);
-
-            Assert.ThrowsException<ArgumentNullException>(apiClientCreator);
-        }
-
-        private Action GetApiClientFactory(Type type)
-        {
-            return type.Name switch
-            {
-                nameof(String) => () => new ApiClient((string)null),
-                nameof(ApiConfiguration) => () => new ApiClient((ApiConfiguration)null),
-                _ => throw new NotImplementedException(),
-            };
+            Assert.ThrowsException<ArgumentNullException>(() => new ApiClient(null));
         }
     }
 }
